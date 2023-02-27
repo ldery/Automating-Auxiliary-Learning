@@ -24,7 +24,7 @@ Note that extra packages can be found in this file :
 ```
 aang_environment_august30th2022.yml
 ```
-and you can try to look up the appropriate versions in that  file if you try to run after the first installation above and run into package not found errors.
+You can look up the appropriate versions in the above file if you try to run after the first installation above and run into package not found errors.
 
 
 
