@@ -29,19 +29,19 @@ You can look up the appropriate versions in the above file if you try to run aft
 
 ## Running
 command flags are formatted {example}{description}
-> python hyperparam_search.py
->
-> -task {citation_intent}{name of task. These are listed in the hyperparam_search.py function -- get_task_info()}
 
-> -base-spconfig {citation.supervised}{name of the search space -- list of search space names in AutoSearchSpace/searchspace_options.py in the get_config()}       
-> -patience {20}{How long to keep running after validation set performance has plateaud before ending trianing} 
-> -grad-accum-steps {4}{Number of gradient accumulation steps. This takes into already takes into account the total batch size so no need to update that if this is updated}
-> -exp-name {SUPERVISED}{Name given to the experiment}
-> -gpu-list {"[0, 1]"}{string array of the list of gpus to use. The script will automatically split hyper-parameters runs amongst these gpus} 
-> -hyperconfig {partial_big}{Name of the hyper-parmeter config to explore. List is present in hyper_search_configs.py get_hyper_config(). }
-> -runthreads {}{this is a flag. Turn this off if experiments have already been run and you just want to re-aggregate results}
-> -pure-transform {}{this is a flag. This determines whether we start the corruption Transforms are pure transforms (replace only, mask only) verus mixed transforms as with BERT}
-
+```
+python hyperparam_search.py
+-task              {citation_intent}{name of task. These are listed in the hyperparam_search.py function -- get_task_info()}
+-base-spconfig     {citation.supervised}{name of the search space -- list of search space names in AutoSearchSpace/searchspace_options.py in the get_config()}       
+-patience          {20}{How long to keep running after validation set performance has plateaud before ending trianing} 
+-grad-accum-steps  {4}{Number of gradient accumulation steps. This takes into already takes into account the total batch size so no need to update that if this is updated}
+-exp-name          {SUPERVISED}{Name given to the experiment}
+-gpu-list          {"[0, 1]"}{string array of the list of gpus to use. The script will automatically split hyper-parameters runs amongst these gpus} 
+-hyperconfig       {partial_big}{Name of the hyper-parmeter config to explore. List is present in hyper_search_configs.py get_hyper_config(). }
+-runthreads        {}{this is a flag. Turn this off if experiments have already been run and you just want to re-aggregate results}
+-pure-transform    {}{this is a flag. This determines whether we start the corruption Transforms are pure transforms (replace only, mask only) verus mixed transforms as with BERT}
+```
 
 ### Important hyper-parameters
 
