@@ -29,7 +29,8 @@ You can look up the appropriate versions in the above file if you try to run aft
 
 
 ### Notes on Running
-The run commands are in hyperparam_search.py 
+The run commands are in hyperparam_search.py
+
 If you run hyperparam_search.py with the appropriate settings, results will be saved as a csv in resultsSheet which you can analyze
 Data for 1 dataset citation_intent/ACL-ARC has been provided. Data for other tasks can be obtained by following the instructions listed here : 
 
