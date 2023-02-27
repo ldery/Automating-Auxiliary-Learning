@@ -1,5 +1,5 @@
 # Automating-Auxiliary-Learning
-Code associated with the ICLR2023 paper AANG: Automating Auxiliary Learning
+Code associated with the ICLR2023 paper AANG: [Automating Auxiliary Learning](https://openreview.net/forum?id=vtVDI3w_BLL)
 
 ## Citation
 
