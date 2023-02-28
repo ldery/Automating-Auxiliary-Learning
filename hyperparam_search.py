@@ -26,16 +26,15 @@ class MyThreadClass(threading.Thread):
 
 '''
 For Paper Results [Larger Hyper-param Space]
-python hyperparam_search.py -task citation_intent -base-spconfig jointbasic           -patience 20 -grad-accum-steps 4 -exp-name JOINT-BASIC -gpu-list "[0]" -hyperconfig partial_big_1   -runthreads -pure-transform
+python hyperparam_search.py -task citation_intent -base-spconfig jointbasic           -patience 20 -grad-accum-steps 4 -exp-name JOINT-BASIC -gpu-list "[0]" -hyperconfig partial_big   -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig xlnet                -patience 20 -grad-accum-steps 4 -exp-name XLNET       -gpu-list "[1]" -hyperconfig partial_onetask -runthreads -pure-transform
-python hyperparam_search.py -task citation_intent -base-spconfig tapt                 -patience 20 -grad-accum-steps 4 -exp-name TAPT        -gpu-list "[2]" -hyperconfig partial_onetask -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig citation.supervised  -patience 20 -grad-accum-steps 4 -exp-name SUPERVISED  -gpu-list "[3]" -hyperconfig partial_big     -runthreads -pure-transform
+python hyperparam_search.py -task citation_intent -base-spconfig citation.supervised  -patience 20 -grad-accum-steps 4 -exp-name STATIC_MT   -gpu-list "[3]" -hyperconfig partial_big_multi  -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig gpt                  -patience 20 -grad-accum-steps 4 -exp-name GPT         -gpu-list "[2]" -hyperconfig partial_onetask -runthreads -pure-transform
 
 Best HyperConfig
 python hyperparam_search.py -task citation_intent -base-spconfig jointbasic           -patience 20 -grad-accum-steps 4 -exp-name JOINT-BASIC -gpu-list "[0]" -hyperconfig ct_best_joint -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig xlnet                -patience 20 -grad-accum-steps 4 -exp-name XLNET       -gpu-list "[1]" -hyperconfig ct_best_xlnet -runthreads -pure-transform
-python hyperparam_search.py -task citation_intent -base-spconfig tapt                 -patience 20 -grad-accum-steps 4 -exp-name TAPT        -gpu-list "[2]" -hyperconfig ct_best_tapt  -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig citation.supervised  -patience 20 -grad-accum-steps 4 -exp-name SUPERVISED  -gpu-list "[3]" -hyperconfig ct_best_ours  -runthreads -pure-transform
 python hyperparam_search.py -task citation_intent -base-spconfig gpt                  -patience 20 -grad-accum-steps 4 -exp-name GPT         -gpu-list "[2]" -hyperconfig ct_best_gpt   -runthreads -pure-transform
 '''
