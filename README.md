@@ -42,8 +42,15 @@ python hyperparam_search.py
 -runthreads        {}{this is a flag. Turn this off if experiments have already been run and you just want to re-aggregate results}
 -pure-transform    {}{this is a flag. This determines whether we start the corruption Transforms are pure transforms (replace only, mask only) verus mixed transforms as with BERT}
 ```
+To run a single hyper-parameter configuration -- inspect the `get_base_runstring` function from  `hyperparam_search.py` and populate with your hand designed hyper-parameters.
 
 ### Important hyper-parameters
+```
+soptlr : Learning rate for weighting between primary and auxiliary objectives
+aux-lr : Learning rate for weighting amongst auxiliary objectives. 
+classflr : Overall learning rate for task.
+```
+Hyper-parameters for fitting the dev-head as in [META-TARTAN](https://arxiv.org/abs/2109.07437) can be found in the function AutoSearchSpace/modelling.py - add_modelling_options(). They are set to the defaults used in the META-TARTAN paper. 
 
 
 ### Addendums on Running
