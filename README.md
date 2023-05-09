@@ -83,3 +83,8 @@ Results are checkpointed into a folder called autoaux_outputs - which can get bi
 
 ## Checkpoints
 The best checkpoints for [ACL-ARC](https://drive.google.com/file/d/1U8I2kHjHm4Yek0a3Tbog-ugQmC08svLg/view?usp=sharing) and [HYPERPARTISAN](https://drive.google.com/file/d/1Dc2CJTJGjV6V5bQoUVDF22Zw5WJ8m4fh/view?usp=sharing) tasks are linked here.
+
+## Evaluation Procedure for Paper Results
+We run each method and associated hyperparameter configuration for 3 seeds. For each seed, we early stop on the validation set and take the checkpoint with the best validation performance -- we then evaluate this checkpoint on the *test* set. The score of a hyper-parameter configuration is the average over the test performances for the different seeds.
+
+For *all methods*,  we rank the hyper-parameter configurations and take the one with the best test performance.
